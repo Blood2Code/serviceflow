@@ -29,6 +29,9 @@ public class Request {
     @Column(name = "request_path", nullable = false)
     private String requestPath;
 
+    @Column(name = "domain_path", nullable = false)
+    private String domainPath;
+
     @Column(name = "http_method", nullable = false)
     private String httpMethod;
 

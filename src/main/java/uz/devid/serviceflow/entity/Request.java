@@ -44,6 +44,6 @@ public class Request {
     @Column(name = "request_payload", columnDefinition = "TEXT")
     private String requestPayload;
 
-    @Column(name = "response_payload", columnDefinition = "TEXT")
-    private String responsePayload;
+    @OneToOne
+    private Response response;
 }

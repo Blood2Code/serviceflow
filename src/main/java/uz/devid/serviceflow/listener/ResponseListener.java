@@ -22,7 +22,7 @@ public class ResponseListener {
     @RabbitListener(queues = RabbitConfig.SERVICE_FLOW_RESPONSE_QUEUE)
     @Transactional
     public void handleResponse(Response response) {
-        Optional<Request> request = requestRepository.findLastByRequestPath(response.getSourceService());
+        Optional<Request> request = requestRepository.findByCorrelationId(response.getCorrelationId());
         if (request.isPresent()) {
             Request updateRequest = request.get();
             updateRequest.setResponse(response);

@@ -19,6 +19,9 @@ public class Response {
     @UuidGenerator
     private UUID UUID;
 
+    @Column(name = "correlation_id", nullable = false)
+    private String correlationId;
+
     @Column(name = "source_service", nullable = false)
     private String sourceService;
 

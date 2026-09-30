@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiceFlow Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            ServiceFlow
+        </div>
+        <div class="nav-item active">
+            <span>Dashboard</span>
+        </div>
+        <div class="nav-item">
+            <span>Services</span>
+        </div>
+        <div class="nav-item">
+            <span>Settings</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h2>Traceflow Analytics</h2>
+            <input type="text" class="search-bar" placeholder="Search transactions...">
+        </div>
+
+        <div class="transaction-list" id="transactionList">
+            <!-- Transactions will be injected here by JS -->
+            <div class="transaction-card" style="text-align: center; color: var(--text-secondary);">
+                Loading transactions...
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
